@@ -30,6 +30,15 @@ export const StudentsTable = () => {
     );
   }
 
+  if (!studentsResponse.data.length) {
+    return (
+      <MessageAlert
+        status="info"
+        description="There are no students available"
+      />
+    );
+  }
+
   return (
     <TableContainer>
       <Table variant="striped" colorScheme="teal">
